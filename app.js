@@ -50,10 +50,7 @@ const app = express();
 
 //connect DB
 mongoose
-  .connect(process.env.MONGODB_CONNECT_URL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect(process.env.MONGODB_CONNECT_URL, {})
   .then(() => {
     console.log("DB CONNECTED");
   })
